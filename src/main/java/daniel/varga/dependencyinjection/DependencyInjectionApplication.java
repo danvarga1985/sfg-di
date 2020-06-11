@@ -1,6 +1,8 @@
 package daniel.varga.dependencyinjection;
 
 import daniel.varga.dependencyinjection.controllers.*;
+import daniel.varga.dependencyinjection.examplebeans.FakeDataSource;
+import daniel.varga.dependencyinjection.examplebeans.FakeJmsBroker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -13,11 +15,13 @@ public class DependencyInjectionApplication {
 
 		MyController myController = (MyController) ctx.getBean("myController");
 
-		System.out.println(myController.sayHello());
-		System.out.println(ctx.getBean(PropertyInjectedController.class).getGreeting());
-		System.out.println(ctx.getBean(SetterInjectedController.class).getGreeting());
-		System.out.println(ctx.getBean(ConstructorInjectedController.class).getGreeting());
+		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
 
+		System.out.println(fakeDataSource.getUser());
+
+		FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
+
+		System.out.println(fakeJmsBroker.getUser());
 
 	}
 
