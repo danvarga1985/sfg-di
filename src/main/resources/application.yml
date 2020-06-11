@@ -1,0 +1,12 @@
+demo:
+  jms:
+    username: JMS Username
+    password: JMS Password
+    url: JMS URL
+
+---
+spring:
+  profiles: de
+demo:
+  jms:
+    username: JMS German-Username

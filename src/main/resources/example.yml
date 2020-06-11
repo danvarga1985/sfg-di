@@ -1,0 +1,34 @@
+#this is a comment
+
+name: Dan
+
+names: #Inline comment
+    -Francis
+    -Kim
+    -Joey
+
+pound_sign: "#" #now its a value
+
+book:
+    author: Erns Jünger
+    publisher: Penguin
+
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+string_val: "A common string"
+
+colon_string: "Lets count: a-one, a-two, a-three"
+
+include_new_lines: |
+    asd dfgfd fdg
+    sdfds dfds sdfsdf
+    erewg s
+
+ignore_new_lines: >
+    this is just
+    one long
+    string
